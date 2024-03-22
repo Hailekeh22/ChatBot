@@ -5,10 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6rem;
+    height: 5rem;
+    width: 100%;
+    padding: 0 20%;
 }
 
 .chatbox{
+    width: 100%;
     padding: .5rem .5rem;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -17,8 +20,8 @@
 }
 
 .textinput{
-    width: 25rem;
     outline: none;
+    width: 96%;
     background: none;
     border: none;
     color: #fff;
@@ -44,4 +47,16 @@
 
 .sendicon:hover{
     color: blue;
+}
+
+@media (max-width:900px) {
+ .textbox{
+    padding: 0 10%;
+ }   
+}
+
+@media (max-width:450px) {
+ .textbox{
+    padding: 0 5%;
+ }   
 }
