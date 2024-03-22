@@ -1,6 +1,6 @@
 .navcontainer{
     width: 100%;
-    height: 8rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,5 +8,5 @@
 
 
 .aipic{
-    width: 6rem;
+    width: 4rem;
 }
