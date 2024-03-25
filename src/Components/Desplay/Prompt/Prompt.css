@@ -1,0 +1,27 @@
+.prompttxt{
+    width: 35rem;
+    height: auto;
+    padding: .3rem .3rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.promptheader{
+    display: flex;
+    align-items: center;
+}
+
+.promptheader p {
+    font-weight: bolder;
+}
+
+.usericon{
+    width: 20px;
+    margin-right: .7rem;
+}
+
+.userprompt{
+    margin-left: 1.9rem;
+}

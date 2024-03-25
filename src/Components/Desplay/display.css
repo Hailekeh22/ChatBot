@@ -1,12 +1,13 @@
 .displaycontainer{
     width: 100%;
-    height: 74vh;
+    height: 80vh;
     background-color: rgba(0, 255, 255, 0.281);
 }
 
 .displaysection{
-    margin: .5rem 30%;
+    margin: .5rem 25%;
     border: 1px solid black;
+    padding: .5rem .5rem;
     height: 100%;
     overflow: auto;
 }
