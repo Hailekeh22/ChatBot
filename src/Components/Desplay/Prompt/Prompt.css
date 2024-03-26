@@ -1,11 +1,12 @@
 .prompttxt{
-    width: 35rem;
+    max-width: 35rem;
     height: auto;
-    padding: .3rem .3rem;
+    padding: .5rem .5rem;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    margin-bottom: .5rem;
 }
 
 .promptheader{

@@ -1,0 +1,22 @@
+.Response{
+    max-width: 40rem;
+    height: auto;
+    padding: .5rem .5rem;
+    background-color: rgb(233, 200, 156);
+    margin-bottom: .5rem;
+    border-radius: 15px;
+}
+
+.responseHeader{
+    display: flex;
+    align-items: center;
+}
+
+.responseHeader p {
+    font-weight: bolder;
+}
+
+.botimg{
+    width: 30px;
+    margin-right: .7rem;
+}

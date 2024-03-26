@@ -9,7 +9,7 @@ function Prompt() {
         <img className="usericon" src={usericon}></img>
         <p>You</p>
       </div>
-      <p className="userprompt">How to make a sandwich</p>
+      <p className="userprompt">How to make a sandwich </p>
     </div>
   );
 }
