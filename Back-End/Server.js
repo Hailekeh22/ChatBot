@@ -9,6 +9,10 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+  res.send("Server is running");
+});
+
 app.post("/completions", async (req, res) => {
   const API_KEY = process.env.API_KEY;
 
