@@ -1,34 +1,10 @@
-import React, { useState } from "react";
+// Input.jsx
+
+import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import "./Input.css";
 
-function Input() {
-  const [inputValue, setInputValue] = useState("");
-
-  const getmessage = async () => {
-    const options = {
-      method: "POST",
-      body: JSON.stringify({
-        message: inputValue,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    try {
-      const response = await fetch(
-        "http://localhost:3030/completions",
-        options
-      );
-      setInputValue("");
-      const data = await response.json();
-      console.log(data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
+function Input(props) {
   return (
     <div>
       <div className="textbox">
@@ -37,10 +13,10 @@ function Input() {
             className="textinput"
             placeholder="Ask Gpt"
             type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            value={props.inputValue}
+            onChange={(e) => props.onInputChange(e.target.value)}
           ></input>
-          <button className="askbtn" onClick={getmessage}>
+          <button className="askbtn" onClick={props.getMessage}>
             <FaPaperPlane className="sendicon" />
           </button>
         </div>
