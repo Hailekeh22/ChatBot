@@ -1,16 +1,17 @@
-const API_KEY = process.env.API_KEY;
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
-const dotenv = require("dotenv");
 const app = express();
 
-dotenv.config();
+require("dotenv").config();
+
 app.use(cors());
 app.use(express.json());
 
 app.post("/completions", async (req, res) => {
+  const API_KEY = process.env.API_KEY;
+
   const options = {
     method: "POST",
     headers: {
