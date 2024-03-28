@@ -4,13 +4,28 @@
     background-color: rgba(0, 255, 255, 0.281);
 }
 
-.displaysection{
+.displaysection {
     margin: .5rem 25%;
     border: 1px solid black;
     padding: .5rem .5rem;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888888 #f4f4f4; 
 }
+
+.displaysection::-webkit-scrollbar-track {
+    background: #f4f4f4; 
+}
+
+.displaysection::-webkit-scrollbar-thumb {
+    background: #888888; 
+}
+
+.displaysection::-webkit-scrollbar-thumb:hover {
+    background: #555555; 
+}
+
 
 
 @media (max-width:1200px){

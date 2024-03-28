@@ -1,5 +1,3 @@
-// App.jsx
-
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
@@ -9,6 +7,7 @@ import Display from "./Components/Desplay/Display";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [inputValuesArray, setInputValuesArray] = useState([]);
+  const [responsesArray, setResponsesArray] = useState([]);
 
   const getMessage = async () => {
     const options = {
@@ -26,9 +25,12 @@ function App() {
         "http://localhost:3030/completions",
         options
       );
+      const data = await response.json();
+      const responcevalue = data.choices[0].message.content;
+
+      setResponsesArray([...responsesArray, responcevalue]);
       setInputValuesArray([...inputValuesArray, inputValue]);
       setInputValue("");
-      const data = await response.json();
       console.log(data);
       console.log(inputValuesArray);
     } catch (e) {
@@ -43,7 +45,10 @@ function App() {
   return (
     <>
       <Header />
-      <Display inputValuesArray={inputValuesArray} />
+      <Display
+        inputValuesArray={inputValuesArray}
+        responsesArray={responsesArray}
+      />
       <Input
         inputValue={inputValue}
         onInputChange={handleInputChange}
