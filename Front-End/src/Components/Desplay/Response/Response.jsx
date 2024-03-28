@@ -9,7 +9,7 @@ function Response({ responseData }) {
     <div className="Response">
       <div className="responseHeader">
         <img className="botimg" src={img} alt="Chat Bot" />
-        <p>Chat Bot</p>
+        <p>GPT</p>
       </div>
       <p className="responsedata">{responseData}</p>
     </div>

@@ -1,14 +1,16 @@
 .displaycontainer{
     width: 100%;
-    height: 80vh;
-    background-color: rgba(0, 255, 255, 0.281);
+    height: 92vh;
+    background-image: linear-gradient(to right bottom, #781f8b, #632a8a, #4f3186, #3c347f, #2a3677);
+    padding: .5rem 0;
 }
 
 .displaysection {
     margin: .5rem 25%;
     border: 1px solid black;
+    border-radius: 20px;
     padding: .5rem .5rem;
-    height: 100%;
+    height: 87%;
     overflow-y: auto; 
     scrollbar-width: thin; 
     scrollbar-color: #888888 #f4f4f4; 

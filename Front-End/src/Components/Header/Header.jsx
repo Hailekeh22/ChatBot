@@ -5,7 +5,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="navcontainer">
-      <img className="aipic" src={img} />
+      <img className="aipic" src={img} /> <p className="botname">Hk ChatApp</p>
     </div>
   );
 }
