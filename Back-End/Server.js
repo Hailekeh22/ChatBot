@@ -1,4 +1,4 @@
-const API_KEY = "";
+const API_KEY = process.env.API_KEY;
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
