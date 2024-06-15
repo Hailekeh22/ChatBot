@@ -21,12 +21,9 @@ function App() {
     };
 
     try {
-      const response = await fetch(
-        "http://localhost:3030/completions",
-        options
-      );
+      const response = await fetch("http://localhost:3030/chat", options);
       const data = await response.json();
-      const responcevalue = data.choices[0].message.content;
+      const responcevalue = data.response.candidates[0].content.parts[0].text;
 
       setResponsesArray([...responsesArray, responcevalue]);
       setInputValuesArray([...inputValuesArray, inputValue]);

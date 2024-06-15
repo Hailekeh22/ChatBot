@@ -1,41 +1,27 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const fetch = require("node-fetch");
+import express from "express";
+import dotenv from "dotenv";
+import bodyParser from "body-parser";
+import cors from "cors";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 const app = express();
-
-require("dotenv").config();
-
+app.use(bodyParser.json());
 app.use(cors());
+dotenv.config();
+
 app.use(express.json());
 
-app.post("/completions", async (req, res) => {
-  const API_KEY = process.env.API_KEY;
+const api_key = process.env.NEWAPI_KEY;
 
-  const options = {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: req.body.message }],
-      max_tokens: 100,
-    }),
-  };
+const genai = new GoogleGenerativeAI(api_key);
 
-  try {
-    const response = await fetch(
-      "https://api.openai.com/v1/chat/completions",
-      options
-    );
-    const data = await response.json();
-    res.send(data);
-  } catch (e) {
-    console.log(e);
-    res.status(500).send("Error processing request");
-  }
+const model = genai.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+
+app.post("/chat", async (req, res) => {
+  const prompttxt = req.body.message;
+  const result = await model.generateContent(prompttxt);
+
+  res.send(result);
 });
 
 const port = 3030;
