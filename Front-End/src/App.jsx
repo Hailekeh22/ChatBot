@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./App.css";
 import Header from "./Components/Header/Header";
 import Input from "./Components/Chat/Input";
 import Display from "./Components/Desplay/Display";
-import { getMessage } from "./Services/Service";
+import { getMessage } from "./Services/APIService.js";
 
 function App() {
   const [inputValue, setInputValue] = useState("");

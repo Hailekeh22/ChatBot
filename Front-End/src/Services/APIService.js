@@ -19,9 +19,9 @@ export const getMessage = async (
   try {
     const response = await fetch("http://localhost:3030/chat", options);
     const data = await response.json();
-    const responcevalue = data.response.candidates[0].content.parts[0].text;
+    const responseevalue = data.response.candidates[0].content.parts[0].text;
 
-    setResponsesArray([...responsesArray, responcevalue]);
+    setResponsesArray([...responsesArray, responseevalue]);
     setInputValuesArray([...inputValuesArray, inputValue]);
     setInputValue("");
     console.log(data);
