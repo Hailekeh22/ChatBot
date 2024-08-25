@@ -11,8 +11,13 @@ export const model = genai.getGenerativeModel({
 });
 
 const app = express();
+const corsOption = {
+  origin: "https://chat-bot-woad-two.vercel.app",
+  methods: "GET,POST",
+};
+
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOption));
 app.use(express.json());
 app.use(promptRoute);
 
