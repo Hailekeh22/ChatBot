@@ -1,8 +1,8 @@
 .displaycontainer{
     margin-top: 3.5rem;
     width: 100%;
-    height: 93.3svh;
-    background-image: linear-gradient(to right bottom, #781f8b, #632a8a, #4f3186, #3c347f, #2a3677);
+    height: 92svh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(168,108,3,1) 100%);
     padding: .5rem 0;
 }
 
@@ -13,21 +13,15 @@
     padding: .5rem .5rem;
     height: 87%;
     overflow-y: auto; 
-    scrollbar-width: thin; 
-    scrollbar-color: #888888 #f4f4f4; 
 }
 
-.displaysection::-webkit-scrollbar-track {
-    background: #f4f4f4; 
+
+
+.displaysection::-webkit-scrollbar {
+    display: none;
 }
 
-.displaysection::-webkit-scrollbar-thumb {
-    background: #888888; 
-}
 
-.displaysection::-webkit-scrollbar-thumb:hover {
-    background: #555555; 
-}
 
 
 

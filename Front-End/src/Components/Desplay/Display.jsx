@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import "./display.css";
 import Prompt from "./Prompt/Prompt";
 import Response from "./Response/Response";
@@ -25,9 +26,18 @@ function Display(props) {
     }
   }
 
+  const chatBottom = useRef(null);
+
+  useEffect(() => {
+    chatBottom.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatItems]);
+
   return (
     <div className="displaycontainer">
-      <div className="displaysection">{chatItems}</div>
+      <div className="displaysection">
+        {chatItems}
+        <div ref={chatBottom}></div>
+      </div>
     </div>
   );
 }
