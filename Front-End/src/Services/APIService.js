@@ -18,7 +18,7 @@ export const getMessage = async (
 
   try {
     const response = await fetch(
-      "https://chatbot-backend-w3qa.onrender.com/",
+      "https://chatbot-backend-w3qa.onrender.com/chat",
       options
     );
     const data = await response.json();
