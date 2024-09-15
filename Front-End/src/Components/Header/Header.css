@@ -45,6 +45,11 @@
 
 }
 
+.appName {
+    display: flex;
+    align-items: center;
+}
+
 .aboutContainer{
     position: absolute;
     top: 10svh; 
@@ -54,4 +59,13 @@
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 99; 
+}
+
+@media (max-width:500px){
+    .navcontainer {
+        justify-content: space-between;
+    }
+    .appName {
+        padding-left: 1.5rem;
+    }
 }

@@ -12,7 +12,10 @@ function Header() {
 
   return (
     <div className="navcontainer">
-      <img className="aipic" src={img} /> <p className="botname">Hk ChatApp</p>
+      <div className="appName">
+        <img className="aipic" src={img} />{" "}
+        <p className="botname">Hk ChatApp</p>
+      </div>
       <div className="about">
         <a onClick={toogleAbout}>About</a>
       </div>
