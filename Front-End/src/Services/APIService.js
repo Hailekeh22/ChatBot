@@ -2,7 +2,6 @@ export const getMessage = async (
   inputValue,
   setResponsesArray,
   responsesArray,
-  setInputValuesArray,
   inputValuesArray,
   setInputValue
 ) => {
@@ -25,10 +24,7 @@ export const getMessage = async (
     const responseevalue = data.response.candidates[0].content.parts[0].text;
 
     setResponsesArray([...responsesArray, responseevalue]);
-    setInputValuesArray([...inputValuesArray, inputValue]);
-    setInputValue("");
-    console.log(data);
-    console.log(inputValuesArray);
+  
   } catch (e) {
     console.log(e);
   }

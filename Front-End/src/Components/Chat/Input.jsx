@@ -19,6 +19,7 @@ function Input(props) {
             className="textinput"
             placeholder="Ask Gpt"
             type="text"
+            disabled={props.isLoading}
             value={props.inputValue}
             onChange={(e) => props.onInputChange(e.target.value)}
             onKeyDown={handleSubmit}
