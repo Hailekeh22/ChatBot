@@ -46,6 +46,7 @@ function App() {
       setResponsesArray,
       responsesArray,
       inputValuesArray,
+      setInputValuesArray
     );
 
     setIsLoading(false)
