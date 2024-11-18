@@ -17,7 +17,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const showToastMessage = () => {
-    toast.info('The back-end is deployed on a free service. The first request takes 30-50 seconds.', {
+    toast.info('The back-end is deployed on a free service. The first request might take 30-50 seconds.', {
       position: "top-right",
       autoClose: false,
       hideProgressBar: false,
