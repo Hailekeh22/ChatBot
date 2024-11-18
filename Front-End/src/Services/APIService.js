@@ -3,7 +3,6 @@ export const getMessage = async (
   setResponsesArray,
   responsesArray,
   inputValuesArray,
-  setInputValue
 ) => {
   const options = {
     method: "POST",
@@ -27,6 +26,7 @@ export const getMessage = async (
     if(data.error){
       alert(`can not fetch content from gemini-1.5-flash-latest \n The model is overloaded. Please try again later.`);
       setResponsesArray([]);
+      inputValuesArray([]);
       return 0;
 
     } 
