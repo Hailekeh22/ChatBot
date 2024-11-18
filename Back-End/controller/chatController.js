@@ -1,8 +1,12 @@
 import { model } from "../App.js";
 
 export const chatController = async (req, res) => {
-  const prompttxt = req.body.message;
-  const result = await model.generateContent(prompttxt);
-
-  res.send(result);
+  try {
+    const prompttxt = req.body.message;
+    const result = await model.generateContent(prompttxt);
+  
+    res.send(result);
+  } catch (e) {
+    res.send({error: true})
+  }
 };
