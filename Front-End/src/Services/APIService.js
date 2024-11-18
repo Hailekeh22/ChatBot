@@ -26,7 +26,9 @@ export const getMessage = async (
 
     if(data.error){
       alert(`can not fetch content from gemini-1.5-flash-latest \n The model is overloaded. Please try again later.`);
+      setResponsesArray([]);
       return 0;
+
     } 
 
     const responseevalue = data.response.candidates[0].content.parts[0].text;
