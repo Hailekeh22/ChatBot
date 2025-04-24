@@ -7,7 +7,7 @@ import { promptRoute } from "./routes/promptRoute.js";
 
 export const genai = new GoogleGenerativeAI(api_key);
 export const model = genai.getGenerativeModel({
-  model: "gemini-1.5-flash-latest",
+  model: "gemini-2.0-flash",
 });
 
 const app = express();
